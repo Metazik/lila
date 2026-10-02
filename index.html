@@ -3,90 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lila Golden — Live Nights Agadir</title>
-<meta name="description" content="Lila Golden Agadir — dîners, musique live et soirées à thème. Réservez votre soirée.">
+<title>Omar Ait King — Créateur de soirées</title>
+<meta name="description" content="Omar Ait King crée, organise, promeut et anime des soirées musicales de A à Z.">
 <style>
-:root{--bg:#090909;--card:#141414;--gold:#d8ad5a;--cream:#f6f0e4;--muted:#b5b0a6}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
-.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:50px 20px;
-background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.88)),radial-gradient(circle at 50% 25%,#5a4524 0,#17130d 34%,#090909 70%)}
-.badge{display:inline-block;border:1px solid rgba(216,173,90,.65);color:var(--gold);padding:9px 16px;border-radius:99px;text-transform:uppercase;letter-spacing:2px;font-size:12px}
-h1{font-family:Georgia,serif;font-size:clamp(48px,9vw,96px);line-height:.95;margin:22px 0 18px}
-h1 span{color:var(--gold)}.lead{max-width:720px;margin:auto;font-size:20px;line-height:1.6;color:#ddd}
-.btn{display:inline-block;margin:28px 8px 0;padding:15px 24px;border-radius:6px;text-decoration:none;font-weight:700}
-.primary{background:var(--gold);color:#111}.secondary{border:1px solid #777;color:white}
-section{max-width:1100px;margin:auto;padding:75px 22px}.eyebrow{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:12px}
-h2{font-family:Georgia,serif;font-size:42px;margin:10px 0 35px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--card);border:1px solid #292929;border-radius:14px;padding:28px}
-.card h3{font-family:Georgia,serif;font-size:24px;margin-top:0}.card p{color:var(--muted);line-height:1.6}
-.event{background:linear-gradient(135deg,#1b1711,#111);border:1px solid #3a2e1c;border-radius:18px;padding:35px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px}
-.price{font-size:30px;color:var(--gold);font-weight:bold}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step strong{display:block;color:var(--gold);font-size:28px;margin-bottom:8px}
-.cta{text-align:center;background:linear-gradient(180deg,#15110b,#0b0b0b);border-top:1px solid #302516;border-bottom:1px solid #302516}
-footer{text-align:center;color:#777;padding:30px 20px;font-size:13px}
-@media(max-width:750px){.grid,.steps{grid-template-columns:1fr}.event{grid-template-columns:1fr}h2{font-size:34px}}
+:root{
+ --black:#080808;--panel:#11100e;--gold:#d8ad62;--gold2:#f0d18d;
+ --white:#f7f3eb;--muted:#aaa49a;--line:#29251f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.hero{
+ min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+ padding:40px 20px;position:relative;overflow:hidden;
+ background:
+ radial-gradient(circle at 50% 30%,rgba(216,173,98,.18),transparent 30%),
+ radial-gradient(circle at 80% 80%,rgba(216,173,98,.07),transparent 28%),#080808;
+}
+.hero:before{content:"";position:absolute;inset:25px;border:1px solid rgba(216,173,98,.13);pointer-events:none}
+.wrap{width:min(100%,1050px);margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:var(--gold);font-weight:600}
+h1{font:normal clamp(54px,10vw,112px)/.9 Georgia,serif;letter-spacing:-4px;margin:22px 0}
+h1 span{color:var(--gold)}
+.hero h2{font-size:clamp(20px,3vw,30px);font-weight:400;margin:0 auto 18px}
+.hero p{max-width:650px;margin:auto;color:var(--muted);font-size:17px;line-height:1.8}
+.actions{margin-top:35px}
+.btn{display:inline-block;padding:15px 25px;border:1px solid #51483b;margin:5px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#111;font-weight:700}
+section{padding:105px 22px}
+.dark{background:#0d0c0a}
+h2.title{font:normal clamp(34px,5vw,55px)/1.05 Georgia,serif;margin:12px 0 50px}
+.intro{max-width:700px;color:var(--muted);line-height:1.8;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{background:var(--panel);border:1px solid var(--line);padding:30px;min-height:210px}
+.num{font-size:12px;color:var(--gold);letter-spacing:2px}
+.card h3{font:normal 24px Georgia,serif;margin:25px 0 12px}
+.card p{color:var(--muted);font-size:14px;line-height:1.7;margin:0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:#0a0a0a;padding:28px 22px;min-height:180px}
+.step strong{font:28px Georgia,serif;color:var(--gold)}
+.step h3{font-size:16px;margin:18px 0 8px}
+.step p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
+.event{background:linear-gradient(135deg,#18130c,#0d0c0a);border:1px solid #3b3020;padding:50px;display:grid;grid-template-columns:1.2fr .8fr;gap:45px;align-items:center}
+.event h3{font:normal clamp(34px,5vw,58px)/1 Georgia,serif;margin:12px 0}
+.event p{color:var(--muted);line-height:1.8}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+.tag{border:1px solid #3d382f;padding:9px 12px;font-size:11px;color:#ccc}
+.quote{text-align:center;padding:115px 20px}
+.quote blockquote{max-width:850px;margin:25px auto;font:normal clamp(30px,5vw,58px)/1.15 Georgia,serif}
+.quote blockquote span{color:var(--gold)}
+.contact{text-align:center;border-top:1px solid var(--line);background:linear-gradient(#11100e,#090909)}
+.contact p{color:var(--muted);max-width:550px;margin:0 auto 28px;line-height:1.7}
+footer{text-align:center;color:#555;padding:28px;font-size:11px;letter-spacing:2px}
+@media(max-width:800px){
+ .grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
+ .event{grid-template-columns:1fr;padding:32px}
+}
+@media(max-width:520px){
+ section{padding:75px 18px}.grid,.steps{grid-template-columns:1fr}
+ h1{letter-spacing:-2px}.hero:before{inset:12px}
+}
 </style>
 </head>
 <body>
 
 <header class="hero">
-<div>
-<div class="badge">Agadir • La Plage</div>
-<h1>LILA <span>GOLDEN</span></h1>
-<p class="lead"><strong>Des soirées qui donnent envie de sortir.</strong><br>
-Dîner, musique live, artistes, ambiance et soirées à thème — une nouvelle expérience à Agadir.</p>
-<a class="btn primary" href="#reservation">Réserver une soirée</a>
-<a class="btn secondary" href="#concept">Découvrir le concept</a>
-</div>
+ <div class="wrap">
+  <div class="eyebrow">Lila Golden · Agadir</div>
+  <h1>Je crée les <span>soirées.</span></h1>
+  <h2>Chanteur & organisateur des spectacles de Lila Golden.</h2>
+  <p>
+   Je prends en charge la création et l'animation des soirées de Lila Golden :
+   programmation musicale, artistes, promotion, vidéos et expérience du public.
+  </p>
+  <div class="actions">
+   <a class="btn gold" href="#contact">Créer une soirée</a>
+   <a class="btn" href="#systeme">Voir le système</a>
+  </div>
+ </div>
 </header>
 
-<section id="concept">
-<div class="eyebrow">Le concept</div>
-<h2>Plus qu'un restaurant. Une soirée.</h2>
-<div class="grid">
-<div class="card"><h3>🎤 Live Music</h3><p>Chanteurs, chanteuses, duos et performances live sélectionnés pour créer une vraie ambiance.</p></div>
-<div class="card"><h3>✨ Soirées à thème</h3><p>French Night, années 80/90, Soul, Acoustic, Dinner & Live… Chaque semaine, une nouvelle raison de venir.</p></div>
-<div class="card"><h3>📱 Une soirée qui continue en ligne</h3><p>Reels, vidéos courtes et contenu social pour faire découvrir l'ambiance de Lila Golden avant même d'y venir.</p></div>
-</div>
+<section id="systeme">
+ <div class="wrap">
+  <div class="eyebrow">Le concept</div>
+  <h2 class="title">Les spectacles de Lila Golden. De A à Z.</h2>
+  <p class="intro">
+   Je suis le chanteur et l'organisateur des spectacles de Lila Golden. Mon objectif :
+   créer des rendez-vous musicaux réguliers, faire connaître les soirées et donner envie
+   au public de venir, réserver et revenir.
+  </p>
+  <div class="grid" style="margin-top:45px">
+   <article class="card"><div class="num">01 · ARTISTES</div><h3>🎤 Une vraie programmation</h3><p>Chanteurs, chanteuses, duos et musiciens sélectionnés selon le concept et le public.</p></article>
+   <article class="card"><div class="num">02 · CONTENU</div><h3>🎬 Donner envie</h3><p>Teasers, vidéos courtes, Reels et contenus qui montrent l'ambiance avant même la soirée.</p></article>
+   <article class="card"><div class="num">03 · PROMOTION</div><h3>📣 Faire venir</h3><p>Réseaux sociaux, partenaires, communautés locales et clientèle touristique.</p></article>
+   <article class="card"><div class="num">04 · LIVE</div><h3>✨ Faire vivre</h3><p>Animation, chant, coordination et présence sur place pour transformer l'idée en expérience.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="dark">
+ <div class="wrap">
+  <div class="eyebrow">Le système</div>
+  <h2 class="title">De l'idée au public.</h2>
+  <div class="steps">
+   <div class="step"><strong>01</strong><h3>Imaginer</h3><p>Thème, concept, date et positionnement.</p></div>
+   <div class="step"><strong>02</strong><h3>Produire</h3><p>Artistes, visuels, landing page et teaser.</p></div>
+   <div class="step"><strong>03</strong><h3>Promouvoir</h3><p>Contenu, réseaux et partenaires.</p></div>
+   <div class="step"><strong>04</strong><h3>Accueillir</h3><p>Musique, ambiance et expérience live.</p></div>
+   <div class="step"><strong>05</strong><h3>Recommencer</h3><p>Les meilleurs moments deviennent le contenu de la prochaine soirée.</p></div>
+  </div>
+ </div>
 </section>
 
 <section>
-<div class="eyebrow">Cette semaine</div>
-<h2>Une soirée à vivre.</h2>
-<div class="event">
-<div>
-<h3 style="font:32px Georgia,serif;margin-top:0">Lila Golden — Live Night</h3>
-<p style="color:#ccc;line-height:1.7">Une soirée musicale autour d'un dîner, avec performance live et ambiance lounge. Venez en couple, entre amis ou pour simplement profiter de la musique.</p>
-<p style="color:#999">📍 La Plage, Agadir</p>
-</div>
-<div>
-<div class="price">Réservation</div>
-<p style="color:#aaa">Places limitées selon la capacité de la soirée.</p>
-<a class="btn primary" href="#reservation">Je réserve</a>
-</div>
-</div>
+ <div class="wrap">
+  <div class="eyebrow">Exemple</div>
+  <div class="event">
+   <div>
+    <div class="eyebrow">Lila Golden · Agadir</div>
+    <h3>French<br><span style="color:var(--gold)">Live Night</span></h3>
+    <p>Une soirée créée et organisée par Omar Ait King pour Lila Golden, pensée pour une clientèle française et internationale : dîner, live music, artistes invités et ambiance lounge.</p>
+    <div class="tags">
+     <span class="tag">🎤 LIVE</span><span class="tag">🍽️ DINNER</span>
+     <span class="tag">🥂 LOUNGE</span><span class="tag">📱 CONTENT</span>
+    </div>
+   </div>
+   <div>
+    <p><strong style="color:var(--white)">Le principe :</strong><br>
+    créer une raison de venir ce soir, la rendre visible en ligne, faire vivre l'expérience et utiliser la soirée pour préparer la suivante.</p>
+    <a class="btn gold" href="#contact">Proposer une soirée</a>
+   </div>
+  </div>
+ </div>
 </section>
 
-<section>
-<div class="eyebrow">Notre ambition</div>
-<h2>Faire de chaque soirée un événement.</h2>
-<div class="steps">
-<div class="card step"><strong>01</strong>Créer une soirée</div>
-<div class="card step"><strong>02</strong>Inviter le public</div>
-<div class="card step"><strong>03</strong>Faire vivre l'expérience</div>
-<div class="card step"><strong>04</strong>Partager les meilleurs moments</div>
-</div>
+<section class="quote">
+ <div class="eyebrow">Ma mission</div>
+ <blockquote>« Je ne suis pas seulement<br><span>le chanteur.</span><br>Je crée et j'organise les spectacles. »</blockquote>
 </section>
 
-<section id="reservation" class="cta">
-<div class="eyebrow">Réservation</div>
-<h2>Vous venez ce soir ?</h2>
-<p class="lead">Réservez votre table ou demandez les prochaines soirées musicales.</p>
-<a class="btn primary" href="https://wa.me/212655723619?text=Bonjour%20Lila%20Golden%2C%20je%20souhaite%20r%C3%A9server%20pour%20une%20soir%C3%A9e%20Live." target="_blank">Réserver sur WhatsApp</a>
-<p style="color:#777;margin-top:22px">Lila Golden • La Plage, Agadir</p>
+<section class="contact" id="contact">
+ <div class="wrap">
+  <div class="eyebrow">Booking · Collaboration · Événement</div>
+  <h2 class="title">Une soirée à préparer ?</h2>
+  <p>Lila Golden est mon terrain de scène : musique live, artistes invités, soirées à thème et création de contenu.</p>
+  <a class="btn gold" href="https://wa.me/212723800411?text=Bonjour%20Omar%20Ait%20King%2C%20je%20souhaite%20cr%C3%A9er%20une%20soir%C3%A9e." target="_blank">Parler du projet</a>
+ </div>
 </section>
 
-<footer>© Lila Golden Agadir — Live • Dinner • Nights</footer>
+<footer>OMAR AIT KING · CHANTEUR & ORGANISATEUR DES SPECTACLES DE LILA GOLDEN · AGADIR</footer>
 </body>
 </html>
